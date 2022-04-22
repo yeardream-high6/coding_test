@@ -20,3 +20,4 @@ def solution(people, limit):
 
 print(solution([70, 50, 80, 50],100))
 print(solution([70, 50, 80, 50,90],100))
+print(solution([50,70,70, 50, 80, 50,90],100))
