@@ -19,3 +19,4 @@ def solution(people, limit):
     return answer
 
 print(solution([70, 50, 80, 50],100))
+print(solution([30, 50, 80, 50, 90],100))
