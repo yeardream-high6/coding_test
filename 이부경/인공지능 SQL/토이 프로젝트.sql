@@ -56,12 +56,22 @@ WHERE dept_name = 'Comp. Sci.'
 
 
 -- d. 각 학부별로 가장 많은 연봉을 가진 instructor중에서 가장 연봉이 낮은 instructor의 name과 dept_name을 찾아주세요.
-SELECT dept_name, name, max(salary) as max_salary 
+SELECT dept_name, name
 FROM instructor
-GROUP BY dept_name
-ORDER BY max_salary
-LIMIT 1;
--- 'Psychology', 'DAgostino', '62579.61'
+WHERE dept_name = 
+	(SELECT dept_name
+	FROM 
+		(SELECT dept_name, max(salary) as max_salary
+		FROM instructor
+		GROUP BY dept_name
+		ORDER BY max_salary
+		limit 1
+		) T1
+	)
+ORDER BY salary DESC
+limit 1
+;
+-- 'Psychology', 'Soisalon-Soininen', '62579.61'
 
 
 -- e. 2018년도 가을학기에 수업을 진행하는 모든 instructor를 찾아주세요.
