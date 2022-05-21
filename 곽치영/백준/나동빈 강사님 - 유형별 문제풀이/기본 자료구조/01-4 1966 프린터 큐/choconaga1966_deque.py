@@ -7,7 +7,7 @@ T = int(input())
 
 for _ in range(T):
     N, M = map(int, input().split())
-    que = deque(pair for pair in enumerate(map(int, input().split())))
+    que = deque(enumerate(map(int, input().split())))
     
     for i in range(1, N+1):
         max_ = max(map(lambda p: p[1],que))
