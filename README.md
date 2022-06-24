@@ -2,6 +2,7 @@
 
 - 백준 단계별 문제풀이: https://www.acmicpc.net/step
 - 나동빈 강사님 유형별 문제 풀이: https://github.com/ndb796/Fast_Campus_Algorithm_Lecture_Notes
+- 프로그래머스 고득점 Kit: https://programmers.co.kr/learn/challenges?tab=algorithm_practice_kit
 
 ## 나동빈 강사님 유형별 문제 풀이 목록
 
@@ -112,3 +113,30 @@
 |12|9663 |N-Queen      |중|백트래킹          |40분|
 |12|1987 |알파벳       |중|백트래킹          |40분|
 |12|1759 |암호 만들기  |중|백트래킹          |30분|
+
+## 프로그래머스 고득점 Kit
+
+- 프로그래머스 고득점 Kit: https://programmers.co.kr/learn/challenges?tab=algorithm_practice_kit
+
+
+### 해시
+- [10546 배부른 마라토너](https://www.acmicpc.net/problem/10546) (완주하지 못한 선수)
+- [5052 전화번호 목록](https://www.acmicpc.net/problem/5052)
+- [9375 패션왕 신해빈](https://www.acmicpc.net/problem/9375) (위장)
+- (베스트 앨범)
+
+### 스택/큐
+- (기능개발)
+- [1966 프린터 큐](https://www.acmicpc.net/problem/1966) (프린터) 
+- [13335 트럭](https://www.acmicpc.net/problem/13335) (다리를 지나는 트럭)
+- (주식가격) 비슷한 문제들:
+  - [17298 오큰수](https://www.acmicpc.net/problem/17298)
+  - [2493 탑](https://www.acmicpc.net/problem/2493)
+  - [6198 옥상 정원 꾸미기](https://www.acmicpc.net/problem/6198)
+
+### 힙
+
+- (더 맵게)
+- (디스크 컨트롤러)
+  - [1931 회의실 배정](https://www.acmicpc.net/problem/1931)과는 조건이 다르고 답도 다른 문제
+- [7662 이중 우선순위 큐](https://www.acmicpc.net/problem/7662)
