@@ -16,5 +16,5 @@ class Solution:
 ```
 
 ## 바이너리 인덱스 트리
-num 값이 ±10⁴로 제한되어 있으므로 펜윅 트리로 풀 수도 있습니다.
+num 값이 ±10⁴로 제한되어 있으므로 펜윅 트리로 풀 수도 있습니다.  
 [동빈나 - 자료구조: 바이너리 인덱스 트리(Binary Indexed Tree, BIT, 펜윅 트리) 10분 정복](https://youtu.be/fg2iGP4e2mc)
