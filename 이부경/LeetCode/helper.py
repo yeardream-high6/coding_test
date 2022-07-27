@@ -42,15 +42,24 @@ def make_tree(value_list: 'List') -> 'TreeNode':
         dq.append(root)
         while True:
             parent = dq.popleft()
-            parent.left = TreeNode(next(it))
-            dq.append(parent.left)
-            parent.right = TreeNode(next(it))
-            dq.append(parent.right)
+            
+            val = next(it) # left node
+            if val:
+                parent.left = TreeNode(val)
+                dq.append(parent.left)
+                
+            val = next(it) # right node
+            if val:
+                parent.right = TreeNode(val)
+                dq.append(parent.right)
     except StopIteration:
         return root
 
 def tree_to_list(root: Optional[TreeNode]):
     values = []
+    if not root:
+        return values
+    
     dq = deque()
     dq.append(root)
     values.append(root.val)
@@ -67,7 +76,7 @@ def tree_to_list(root: Optional[TreeNode]):
         else:
             values.append(None)
 
-    while not values[-1]:
+    while len(values) > 0 and values[-1] == None:
         values.pop()
     
     return values
