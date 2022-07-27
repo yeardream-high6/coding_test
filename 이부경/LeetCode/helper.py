@@ -44,12 +44,12 @@ def make_tree(value_list: 'List') -> 'TreeNode':
             parent = dq.popleft()
             
             val = next(it) # left node
-            if val:
+            if val != None:
                 parent.left = TreeNode(val)
                 dq.append(parent.left)
                 
             val = next(it) # right node
-            if val:
+            if val != None:
                 parent.right = TreeNode(val)
                 dq.append(parent.right)
     except StopIteration:
