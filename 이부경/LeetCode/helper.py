@@ -80,3 +80,18 @@ def tree_to_list(root: Optional[TreeNode]):
         values.pop()
     
     return values
+
+def find_tree(root: Optional[TreeNode], val: Optional[int]) -> 'TreeNode':
+    if not root:
+        return None
+    
+    if root.val == val:
+        return root
+    
+    found = find_tree(root.left, val)
+    if found:
+        return found
+    
+    found = find_tree(root.right, val)
+    if found:
+        return found
