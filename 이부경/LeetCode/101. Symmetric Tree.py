@@ -18,3 +18,12 @@ class Solution:
             return True
             
         return f(root.left, root.right)
+
+# 100 Same tree 응용
+class Solution:
+    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+        def isSymmetricTree(p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+            if p and q:
+                return p.val == q.val and isSymmetricTree(p.left, q.right) and isSymmetricTree(p.right, q.left)
+            return p is q
+        return isSymmetricTree(root.left, root.right)
