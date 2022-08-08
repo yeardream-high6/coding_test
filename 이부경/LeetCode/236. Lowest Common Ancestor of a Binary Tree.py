@@ -81,6 +81,14 @@ class Solution2:
         solve(root,p,q)
         return self.result    
 
+# 타인 코드
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        if root in [None, p, q]:
+            return root
+        left, right = self.lowestCommonAncestor(root.left, p, q), self.lowestCommonAncestor(root.right, p, q)
+        return root if left and right else left or right
+
 p = TreeNode(5)
 q = TreeNode(4)
 root = make_tree([3,5,1,6,2,0,8,null,null,7,4])
