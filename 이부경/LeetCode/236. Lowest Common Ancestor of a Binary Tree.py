@@ -1,10 +1,9 @@
 #Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-from helper import *
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 
 class TreeNodeExt(TreeNode):
     def __init__(self, x, parent):
@@ -88,9 +87,3 @@ class Solution:
             return root
         left, right = self.lowestCommonAncestor(root.left, p, q), self.lowestCommonAncestor(root.right, p, q)
         return root if left and right else left or right
-
-p = TreeNode(5)
-q = TreeNode(4)
-root = make_tree([3,5,1,6,2,0,8,null,null,7,4])
-a = Solution().lowestCommonAncestor(root, p, q)
-print(a.val)
