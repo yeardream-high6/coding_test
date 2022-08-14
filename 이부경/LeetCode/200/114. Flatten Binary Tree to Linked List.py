@@ -1,10 +1,12 @@
+from typing import Optional
+from collections import deque
+
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-from helper import *
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
 class Solution:
     def flatten(self, root: Optional[TreeNode]) -> None:
@@ -31,18 +33,3 @@ class Solution:
             if parent:
                 parent.right = me
             parent = me
-
-
-#Input: root = [1,2,5,3,4,null,6]
-#Output: [1,null,2,null,3,null,4,null,5,null,6]
-# root = make_tree([1,2,5,3,4,null,6])
-# Solution().flatten(root)
-# print(tree_to_list(root))
-
-root = make_tree([])
-Solution().flatten(root)
-print(tree_to_list(root))
-
-# root = make_tree([0])
-# Solution().flatten(root)
-# print(tree_to_list(root))

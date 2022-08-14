@@ -1,4 +1,10 @@
-from helper import *
+from typing import Optional
+
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
