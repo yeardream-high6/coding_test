@@ -1,5 +1,7 @@
 from typing import Optional, List
 from collections import deque
+import time
+import math
 
 null = None
 
@@ -95,3 +97,12 @@ def find_tree(root: Optional[TreeNode], val: Optional[int]) -> 'TreeNode':
     found = find_tree(root.right, val)
     if found:
         return found
+
+def stop_watch(func):
+    def wrapper(*arg, **kwarg):
+        start = time.time()
+        ret_val = func(*arg, **kwarg)
+        end = time.time()
+        print('소요 시간(초): ', round(end - start, 4))
+        return ret_val
+    return wrapper
