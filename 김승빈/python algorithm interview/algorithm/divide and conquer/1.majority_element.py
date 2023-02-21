@@ -32,3 +32,8 @@ def majorityElement3(self, nums: List[int]) -> int:
 
     return [b, a][nums.count(a) > half]
 
+
+# method 4: pythonic way
+def majorityElement4(self, nums: List[int]) -> int:
+    return sorted(nums)[len(nums) // 2]
+
