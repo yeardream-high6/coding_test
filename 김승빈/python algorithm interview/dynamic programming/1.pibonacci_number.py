@@ -32,6 +32,15 @@ class Solution:
             self.dp[i] = self.dp[i - 1] + self.dp[i - 2]
         return self.dp[N]
 
+
+# method 4: using only two variables
+def fib(self, N: int) -> int:
+    x, y = 0, 1
+    for i in range(0, N):
+        x, y = y, x + y
+    return x
+    
+
 # method 5: matrix
 import numpy as np
 def fib(n):
